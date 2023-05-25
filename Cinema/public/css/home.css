@@ -1,0 +1,361 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+html{
+	scroll-behavior: smooth;
+}
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+*{
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 60px;
+	/* background-image: url('./x.jpg'); */
+	background: linear-gradient(to right, #3edbf0, #77acf1);
+	color: #fff;
+	/* padding: 10px 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+header h1{
+	font-size: 30px;
+	letter-spacing: 1px;
+	font-weight: 900;
+}
+header span{
+	font-size: 28px;
+	color: #72b5d6;
+}
+header .image {
+	width: 259px;
+    height: 47px;
+}
+header .image img{
+	width: 100%;
+	height: 100%;
+}
+
+/* Navigation */
+nav ul {
+	list-style: none;
+	margin: 0 8px 0 0;
+	padding: 10px;
+	display: flex;
+}
+
+nav li {
+	margin: 0 10px;
+	font-size: 1.2rem;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #ccc;
+}
+
+/* Banner */
+#banner {
+	/* background-image: url('./x.jpg'); */
+	background: linear-gradient(to right, #3edbf0, #77acf1);
+	background-size: cover;
+	background-position: center;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	text-align: center;
+}
+
+#banner h2 {
+	font-size: 48px;
+	margin: 0;
+}
+
+#banner p {
+	font-size: 24px;
+	margin: 20px 0;
+}
+
+#banner a {
+	background-color: #fff;
+	color: #333;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-size: 20px;
+	transition: .4s;
+}
+
+#banner a:hover {
+	background-color: #ccc;
+	transform: scale(1.05);
+}
+
+/* Movies */
+#movies {
+	height: 500px;
+	padding: 50px;
+	position: relative;
+}
+#left-arrow{
+	position: absolute;
+	left: 33px;
+	top: 45%;
+	width: 20px;
+	height: 20px;
+	width: 40px;
+	height: 40px;
+	border: none;
+	outline: none;
+	border: #3edbf0 solid 1px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: 900;
+	transition: .3s;
+}
+#right-arrow{
+	position: absolute;
+	right: 43px;
+	top: 45%;
+	width: 40px;
+	height: 40px;
+	border: none;
+	outline: none;
+	border: #3edbf0 solid 1px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: 900;
+	transition: .3s;
+}
+#right-arrow:hover {
+	background-color: #3edbf0;
+
+}
+#left-arrow:hover {
+	background-color: #3edbf0;
+
+}
+#movies .main {
+	font-size: 36px;
+	margin: 0px;
+}
+#movies .movie_container{
+	max-width: 100%;
+	height: 100%;
+	
+	display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+	gap: 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+	align-items: center;
+}
+.movie_container::-webkit-scrollbar{
+    display: none;
+}
+
+.movie_container .movie_card{
+	flex: 0 0 auto;
+	width: 400px;
+	height: 350px;
+	
+	/* padding: 5px; */
+	/* margin: 5px; */
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+.movie_card .head{
+	width: 100%;
+	height: 65%;
+	border-radius: 5px;
+}
+.movie_card .head img{
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+}
+
+.movie_card .tail {
+	width: 100%;
+	height: 35%;
+	
+	display: flex;
+
+}
+
+.movie_card .tail .left{
+	width: 70%;
+	height: 100%;
+	
+}
+.tail .left .hh2{
+	font-size: 20px;
+	margin: 5px 0 10px 0 ;
+}
+.tail .left p{
+	margin: 5px 0;
+}
+
+.movie_card .tail .right{
+	width: 30%;
+	height: 100%;
+	
+	border-bottom-right-radius: 5px;
+    height: 100%;
+	position: relative;
+}
+
+
+.tail .right p{
+    font-weight: 700;
+	font-size: 14px;
+}
+
+.tail .right button{
+    outline: none;
+    width: 100px;
+    height: 35px;
+    padding: 5px;
+    border: none;
+	background: linear-gradient(to right, #3edbf0, #77acf1);
+    position: absolute;
+    right: 5px;
+    bottom: 33px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .4s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+}
+.tail .right button:hover{
+    transform: scale(1.05);
+}
+.tail .right i{
+    font-size: 1.2rem;
+    color: black;
+    display: inline;
+	
+
+}
+.tail .right p{
+    display: inline;
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* 
+#movies ul #card button{
+	color: white;
+	outline: none;
+	border: none;
+	font-weight: 700;
+	border-radius: 5px;
+	width: 90px;
+    height: 30px;
+    padding: 5px;
+	background: linear-gradient(to right, #3edbf0, #77acf1);
+	display: inline;
+	transition: .4s;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	cursor: pointer;
+}
+#movies ul #card button:hover{
+	transform: scale(1.05);
+} */
+
+/* Cinemas */
+#cinemas {
+	padding: 50px;
+	background-color: #f2f2f2;
+}
+
+#cinemas h2 {
+	font-size: 36px;
+	margin: 0;
+}
+
+#cinemas ul {
+	list-style: none;
+	margin: 20px 0 0 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+#cinemas a{
+	text-decoration: none;
+	display: block;
+	color: #333;
+	
+}
+#cinemas li {
+	margin: 0 20px 20px 0;
+	width: calc(33.33% - 20px);
+}
+
+#cinemas ul a {
+	display: block;
+	color: #333;
+	text-decoration: none;
+	transition: .4s;
+}
+#cinemas ul a:hover{
+	transform: scale(1.05);
+}
+#cinemas img {
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+}
+
+#cinemas h3 {
+	font-size: 24px;
+	margin: 10px 0;
+}
+
+#cinemas p {
+	font-size: 18px;
+	margin: 5px 0;
+}
+
+
+/* Footer */
+footer {
+	background: linear-gradient(to right, #3edbf0, #77acf1);
+	color: #fff;
+	padding: 10px 20px;
+	text-align: center;
+}
